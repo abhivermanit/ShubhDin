@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 150 800 380" width="100%" height="100%">
+  <defs>
+    <style>
+      .sun { fill: #FFB500; }
+      .sun-ray { stroke: #FFB500; stroke-width: 6; stroke-linecap: round; }
+      .plant { fill: #FFFFFF; } /* Updated for dark backgrounds */
+      .text-logo { font-family: 'Georgia', 'Times New Roman', serif; font-size: 96px; font-weight: bold; fill: #FFFFFF; text-anchor: middle; letter-spacing: 1px; } /* Updated for dark backgrounds */
+    </style>
+    <path id="leaf" d="M 0 0 Q -45 -100 0 -200 Q 45 -100 0 0 Z" />
+  </defs>
+
+  <g class="sun-ray">
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(-75 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(-60 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(-45 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(-30 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(-15 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(0 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(15 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(30 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(45 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(60 400 380)" />
+    <line x1="400" y1="205" x2="400" y2="175" transform="rotate(75 400 380)" />
+  </g>
+
+  <path class="sun" d="M 230 380 A 170 170 0 0 1 570 380 Z" />
+
+  <g class="plant">
+    <use href="#leaf" transform="translate(400, 400) rotate(-50) scale(0.65)" />
+    <g transform="translate(400, 400) rotate(50) scale(0.65)">
+      <use href="#leaf" />
+      <!-- Cutout stroke remains yellow to reveal the sun behind it -->
+      <path d="M 0 -10 Q -25 -80 0 -150" stroke="#FFB500" stroke-width="8" fill="none" stroke-linecap="round" />
+    </g>
+    <use href="#leaf" transform="translate(400, 405)" />
+  </g>
+
+  <text class="text-logo" x="400" y="495">ShubhDin</text>
+</svg>
